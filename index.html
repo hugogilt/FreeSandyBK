@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="/manifest.json">
-    <title>Tu Aplicación PWA</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Permite el modo de pantalla completa -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- Estilo de la barra de estado -->
+    <title>Mi experiencia BK</title>
+    <style>
+        body {
+            background-image: url('background.png'); /* Asegúrate de que la ruta sea correcta */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            margin: 0; /* Elimina el margen por defecto del body */
+            height: 100vh; /* Asegura que el body tenga altura completa */
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido a tu PWA</h1>
-    <script src="app.js"></script>
+    
 </body>
 </html>
