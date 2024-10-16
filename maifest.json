@@ -1,8 +1,8 @@
 {
-    "name": "Tu Aplicación",
-    "short_name": "App",
-    "start_url": "/index.html",
-    "display": "fullscreen",
+    "short_name": "MiApp",
+    "name": "Mi Aplicación Web Progresiva",
+    "start_url": "/",
+    "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
     "icons": [
