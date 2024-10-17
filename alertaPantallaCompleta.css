@@ -56,6 +56,83 @@ body>p:last-of-type {
     width: 320px;
 }
 
+
+footer {
+    background-color: #002B89;
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    border-radius: 12px 12px 0px 0px;
+    width: 100vw;
+    text-align: center;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 5%;
+  }
+  
+  
+  .link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  #divDonacion {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 246px; 
+    height: 400px; 
+    background-color: #002B89; 
+    display: grid;
+    grid-template-rows: 92.25px 215.25px 92.25px;
+    gap: 10px; 
+    text-align: center;
+    color: white; 
+    border-radius: 8px; 
+    z-index: 1000; 
+    opacity: 0; 
+    transition: opacity 0.5s; 
+  }
+  
+  #divDonacion.show {
+    opacity: 1; 
+  }
+  
+  #divDonacion a{
+    align-self: center;
+  }
+  
+  #payPal {
+    margin: 0 auto;
+  align-self: center;
+    width: 30%; 
+      height: auto; 
+  }
+  #qr {
+    margin: 0 auto;
+    width: 70%;
+    border: solid white 4px;
+    margin-bottom: 10%;
+    align-self: center;
+   
+  
+  }
+  
+  
+  #copyright {
+    right: 1%;
+    bottom: 3%;
+    font-size: 8px;
+    position: absolute;
+  }
+
+
 @media (min-width: 520px) {
     #icon-sandy-p {
         position: initial;
