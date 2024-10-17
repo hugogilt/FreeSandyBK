@@ -2,7 +2,7 @@
 const enlaceEstilo = document.getElementById('theme-stylesheet');
 document.addEventListener("DOMContentLoaded", function () {
   // Comprobar si la web está en modo pantalla completa
-  if (window.navigator.standalone) {
+  if (!window.navigator.standalone) {
     console.log("La aplicación está en modo pantalla completa.");
     // Lista de códigos de meses
     const MONTH_CODES = ['BB', 'LS', 'JH', 'PL', 'BK', 'WH', 'FF', 'BF', 'CF', 'CK', 'CB', 'VM'];
