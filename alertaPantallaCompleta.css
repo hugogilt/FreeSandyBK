@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 2em;
+    background-color: #f0f0f0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+h3 {
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+p {
+    color: #34495e;
+    margin: 10px 0;
+}
+
+body>p:first-of-type {
+    position: relative;
+    line-height: 2em;
+}
+
+#share {
+    width: 30px;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(20%);
+}
+
+#icon-sandy {
+    width: 70px;
+    position: absolute;
+    bottom: -35px;
+    transform: translateX(10%);
+}
+
+#icon-sandy-p {
+    position: relative;
+    line-height: 2em;
+}
+
+body>p:last-of-type {
+    margin-top: 10%;
+
+}
+
+#menu-compartir {
+    width: 320px;
+}
+
+@media (min-width: 520px) {
+    #icon-sandy-p {
+        position: initial;
+        line-height: initial;
+
+    }
+
+    #icon-sandy {
+        position: initial;
+        display: block;
+        margin: 1em auto;
+    }
+
+    body>p:last-of-type {
+        margin-top: initial;
+
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        align-items: start;
+    }
+}
+
+@media (max-height: 769px) {
+    body {
+        font-size: 0.7em;
+    }
+
+    #icon-sandy-p {
+        position: initial;
+        line-height: initial;
+
+    }
+
+    #icon-sandy {
+        position: initial;
+        display: block;
+        margin: 1em auto;
+    }
+
+    body>p:last-of-type {
+        margin-top: initial;
+
+    }
+
+    #menu-compartir {
+        width: 200px;
+    }
+
+    #icon-sandy {
+        width: 50px;
+    }
+
+    #share {
+        width: 20px;
+    }
+}
