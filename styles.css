@@ -1,0 +1,124 @@
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+body,
+div,
+form,
+td,
+th {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(245, 235, 220);
+}
+
+.Skin {
+    color: rgb(0, 0, 0);
+    font-family: helvetica, arial, sans-serif;
+    font-size: medium;
+}
+
+.Skin #LogoContainer {
+    display: none;
+    background: 0px 0px;
+    padding: 15px 15px 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Skin #HeaderContainer {
+    background-color: rgb(245, 235, 220) !important;
+    padding: 10px 0px 0px !important;
+    text-align: center;
+}
+
+.Skin #SkinContent {
+    border: none;
+    border-radius: 0px;
+}
+
+.Skin #Questions {
+    overflow: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto !important;
+}
+
+#EndOfSurvey {
+    background-color: white;
+}
+
+.Skin .EndOfSurvey {
+    color: rgb(0, 0, 0);
+    padding: 60px 40px;
+}
+
+.Skin #Footer {
+    padding: 20px;
+}
+
+.Skin #Plug {
+    text-align: center;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+    border-spacing: 2px;
+    border-color: gray;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+}
+
+.offScreen {
+    position: fixed;
+    left: -9999px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.Skin #Plug a {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 12px 24px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    #BKLogo {
+        max-height: 130px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #MYBKLogo {
+        display: none;
+    }
+}
