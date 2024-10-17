@@ -7,9 +7,8 @@ const month = d.getMonth(); // Obtiene el mes actual (0-11)
 
 // Obtiene el código del mes correspondiente
 const monthCode = MONTH_CODES[month];
-debugger;
-// Genera un número aleatorio entre 0 y 9999
-const randomNums = Math.floor(Math.random() * 100000);
+// Genera un número aleatorio entre 10.000 y 99.999
+const randomNums = Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000;
 
 // Asigna una función al evento onload de la ventana
 window.onload = function() {
@@ -21,3 +20,6 @@ window.onload = function() {
     // Selecciona el primer elemento de la clase 'codigo' y cambia su contenido
     document.querySelector('codigo').innerHTML = message.codigo;
 };
+
+document.querySelector('#reload').onclick=(() => window.location.href = "https://www.miexperienciabkespana.com/");
+document.querySelector('#return').onclick=(() => window.location.href = "https://www.miexperienciabkespana.com/");
