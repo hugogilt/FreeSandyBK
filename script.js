@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       } else if(/Safari/i.test(userAgent)) {
         //Safari
-        alert('mec');
         document.body.innerHTML = `
         <h2>Para el correcto funcionamiento de esta web, es necesario añadirla a la pantalla de inicio.</h2>
         <h3>Pasos a seguir:</h3>
