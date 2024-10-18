@@ -3,7 +3,6 @@ const userAgent = navigator.userAgent;
 document.addEventListener("DOMContentLoaded", function () {
   // Comprobar si la web está en modo pantalla completa
   if (window.matchMedia('(display-mode: standalone)').matches) {
-    console.log("La aplicación está en modo pantalla completa.");
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       // Espera a que el DOM esté completamente cargado
       // Crear el elemento footer
@@ -95,60 +94,67 @@ document.addEventListener("DOMContentLoaded", function () {
       footer.appendChild(row2);
       // Insertar el footer después del último div existente en el body
       document.body.querySelector('div:last-of-type').appendChild(footer); // Puedes usar document.querySelector('div:last-of-type') si deseas añadirlo después de un div específico
-        document.body.style.marginBottom = "160px";
+      document.querySelector('#reload').onclick = (() => window.location.href = "https://www.miexperienciabkespana.com/");
+      document.querySelector('#return').onclick = (() => window.location.href = "https://www.miexperienciabkespana.com/");
+      document.body.style.marginBottom = "160px";
     } else if (/Android/.test(userAgent)) {
       //ANDROID
-      // Crear el elemento header
     const header = document.createElement('header');
-
-    // Crear la imagen con id "x-simbol"
     const imgXSimbol = document.createElement('img');
     imgXSimbol.id = 'x-simbol';
     imgXSimbol.src = 'img/x-simbolo.png';
-
-    // Crear el div con id "link-header-container"
     const linkHeaderContainer = document.createElement('div');
     linkHeaderContainer.id = 'link-header-container';
-
-    // Crear la imagen con id "candado-android"
     const imgCandado = document.createElement('img');
     imgCandado.id = 'candado-android';
     imgCandado.src = 'img/candado-android.png';
-
-    // Crear el div interior para los textos
     const divTextos = document.createElement('div');
-
-    // Crear el primer párrafo
     const p1 = document.createElement('p');
     p1.textContent = 'BK Spain Survey';
-
-    // Crear el segundo párrafo
     const p2 = document.createElement('p');
     p2.textContent = 'miexperienciabkespana.com';
-
-    // Añadir los párrafos al div de textos
     divTextos.appendChild(p1);
     divTextos.appendChild(p2);
-
-    // Añadir la imagen y el div de textos al "link-header-container"
     linkHeaderContainer.appendChild(imgCandado);
     linkHeaderContainer.appendChild(divTextos);
-
-    // Crear la imagen con id "herramientas-android"
     const imgHerramientas = document.createElement('img');
     imgHerramientas.id = 'herramientas-android';
     imgHerramientas.src = 'img/herramientas-android.png';
-
-    // Añadir todos los elementos al header
     header.appendChild(imgXSimbol);
     header.appendChild(linkHeaderContainer);
     header.appendChild(imgHerramientas);
-
-    // Añadir el header al body o a cualquier otro lugar del DOM
     document.body.insertBefore(header, document.body.firstChild); // Agrega el header al inicio del body
-    document.body.style.marginBottom = "160px";
+    document.body.style.marginTop = "40px";
+    ocultarHeaderOnScroll();
     } else {
-
+    //SI NO ES IOS NI ANDROID, LE APLICO EL MENU DE ANDROID
+    const header = document.createElement('header');
+    const imgXSimbol = document.createElement('img');
+    imgXSimbol.id = 'x-simbol';
+    imgXSimbol.src = 'img/x-simbolo.png';
+    const linkHeaderContainer = document.createElement('div');
+    linkHeaderContainer.id = 'link-header-container';
+    const imgCandado = document.createElement('img');
+    imgCandado.id = 'candado-android';
+    imgCandado.src = 'img/candado-android.png';
+    const divTextos = document.createElement('div');
+    const p1 = document.createElement('p');
+    p1.textContent = 'BK Spain Survey';
+    const p2 = document.createElement('p');
+    p2.textContent = 'miexperienciabkespana.com';
+    divTextos.appendChild(p1);
+    divTextos.appendChild(p2);
+    linkHeaderContainer.appendChild(imgCandado);
+    linkHeaderContainer.appendChild(divTextos);
+    const imgHerramientas = document.createElement('img');
+    imgHerramientas.id = 'herramientas-android';
+    imgHerramientas.src = 'img/herramientas-android.png';
+    header.appendChild(imgXSimbol);
+    header.appendChild(linkHeaderContainer);
+    header.appendChild(imgHerramientas);
+    document.body.insertBefore(header, document.body.firstChild); // Agrega el header al inicio del body
+    document.body.style.marginTop = "40px";
+    ocultarHeaderOnScroll();
     }
     // Lista de códigos de meses
     const MONTH_CODES = ['BB', 'LS', 'JH', 'PL', 'BK', 'WH', 'FF', 'BF', 'CF', 'CK', 'CB', 'VM'];
@@ -172,13 +178,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Selecciona el primer elemento de la clase 'codigo' y cambia su contenido
       document.querySelector('codigo').innerHTML = message.codigo;
     };
-
-    document.querySelector('#reload').onclick = (() => window.location.href = "https://www.miexperienciabkespana.com/");
-    document.querySelector('#return').onclick = (() => window.location.href = "https://www.miexperienciabkespana.com/");
   } else {
     enlaceEstilo.setAttribute('href', './alertaPantallaCompleta.css');
     localStorage.setItem('estiloSeleccionado', './alertaPantallaCompleta.css');
-    console.log("La aplicación NO está en modo pantalla completa.");
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       // Dispositivo iOS
       if (/CriOS/i.test(userAgent)) {
@@ -227,23 +229,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <span lang="es">  Si quieres apoyarme, <span class="link">haz click aquí.</span><span lang="en" id="copyright">&copy;Copyright 2024 Hugo Gil Tejero</span></span>
         </footer>
       `;
-      let lastScrollTop = 0; // Guarda la posición anterior del scroll
-      const header = document.getElementById("header");
-
-      window.addEventListener("scroll", function () {
-        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Determina la distancia de desplazamiento
-        if (Math.abs(currentScrollTop - lastScrollTop) > 5) { // Desplazamiento significativo
-          // Si se está desplazando hacia abajo
-          if (currentScrollTop > lastScrollTop) {
-            header.classList.add("hidden"); // Agregar clase para ocultar
-          } else {
-            header.classList.remove("hidden"); // Eliminar clase para mostrar
-          }
-        }
-        lastScrollTop = currentScrollTop; // Actualiza la posición anterior
-      });
     } else if (/windows|mac|Macintosh|MacIntel|MacPPC|Mac68K|MacOS|CrOS|linux/i.test(userAgent)) {
       // PC
       document.body.innerHTML = `
@@ -311,3 +296,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+function ocultarHeaderOnScroll() {
+  let lastScrollTop = 0; // Guarda la posición anterior del scroll
+      const header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Determina la distancia de desplazamiento
+        if (Math.abs(currentScrollTop - lastScrollTop) > 5) { // Desplazamiento significativo
+          // Si se está desplazando hacia abajo
+          if (currentScrollTop > lastScrollTop) {
+            header.classList.add("hidden"); // Agregar clase para ocultar
+          } else {
+            header.classList.remove("hidden"); // Eliminar clase para mostrar
+          }
+        }
+        lastScrollTop = currentScrollTop; // Actualiza la posición anterior
+      });
+}
