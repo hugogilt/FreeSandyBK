@@ -218,9 +218,67 @@ footer div {
     justify-items: center;
     align-items: center;
  }
+
+ header {
+    width: 100vw;
+    background-color: #FFFBF8;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: 45px auto 140px;
+    background-color: #303135;
+    color: white;
+    height: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#link-header-container > div > p:first-of-type {
+    font-size: 0.9em;
+}
+
+#link-header-container > div > p:last-of-type {
+    font-size: 0.7em;
+}
+
+header div {
+    background-color: #303135;
+}
+
+header p {
+    line-height: 4px;
+}
+
+#x-simbol {
+    width: 15px;
+    justify-self: center;
+    align-self: center;
+}
+
+#link-header-container {
+    display: grid;
+    grid-template-columns: 17px auto;
+    gap: 10px;
+    align-self: center;
+    justify-self: start;
+}
+
+#candado-android{
+    width: 13px;
+    justify-self: center;
+    align-self: center;
+}
+
+#herramientas-android {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#herramientas-android {
+    justify-self: center;
+    align-self: center;
+    width: 105px;
+}
+
  
- @media (max-height: 847px) {
-    body {
-        margin-bottom: 160px;
-    }
- }
+ 
