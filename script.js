@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>1: Haz click en el botón "compartir" de la barra de direcciones: <img id="share" src="img/removed-bg/share-transparent.png" alt="Botón compartir"></p>
         <p>2: Busca la opción: "Añadir a pantalla de inicio" y haz click.</p><img id="menu-compartir" src="img/menu_compartir.png" alt="Menú compartir">
         <p>Asígnale un nombre y haz click en "Añadir".</p>
-        <p id="icon-sandy-p">3: Busca el icono que acabas de crear junto al resto de tus aplicaciones y ábrelo: <img id="icon-sandy" src="img/removed-bg/free-sandy-removebg-preview.png" alt="Icono de la aplicación"></p>
+        <p id="icon-sandy-p">3: Busca el icono que acabas de crear junto al resto de tus aplicaciones y ábrelo: <img id="icon-sandy" src="img/removed-bg/free-sandy-removedbg.png" alt="Icono de la aplicación"></p>
         <p>4: ¡Disfruta de tu helado gratis!</p>
         <footer>
           <span lang="es">  Si quieres apoyarme, <span class="link">haz click aquí.</span><span lang="en" id="copyright">&copy;Copyright 2024 Hugo Gil Tejero</span></span>
