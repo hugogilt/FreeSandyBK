@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("La aplicación NO está en modo pantalla completa.");
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       // Dispositivo iOS
-      if (/Chrome/i.test(userAgent) && !/Edge/i.test(userAgent)) {
+      if (/Chrome/i.test(userAgent)) {
         //Chrome
         document.body.innerHTML = `
         <h2>Para el correcto funcionamiento de esta web, es necesario añadirla a la pantalla de inicio.</h2>
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       } else if(/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
         //Safari
+        alert('mec');
         document.body.innerHTML = `
         <h2>Para el correcto funcionamiento de esta web, es necesario añadirla a la pantalla de inicio.</h2>
         <h3>Pasos a seguir:</h3>
