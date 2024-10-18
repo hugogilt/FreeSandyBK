@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.innerHTML = `
         <h2>Para el correcto funcionamiento de esta web, es necesario añadirla a la pantalla de inicio.</h2>
         <h3>Pasos a seguir:</h3>
-        <p>1: Haz click en el botón "compartir" de la barra de direcciones: <img id="share" src="img/removed-bg/share-transparent.png" alt="Botón compartir"></p>
-        <p>2: Busca la opción: "Añadir a pantalla de inicio" y haz click.</p><img id="menu-compartir" src="img/menu_compartir.png" alt="Menú compartir">
-        <p>Asígnale un nombre y haz click en "Añadir".</p>
+        <p>1: Pulsa en el siguiente icono situado en la parte inferior de la pantalla: <img id="share" src="img/removed-bg/share-transparent.png" alt="Botón compartir"></p>
+        <p>2: Busca la opción: "Añadir a pantalla de inicio" y púlsala.</p><img id="menu-compartir" src="img/menu_compartir.png" alt="Menú compartir">
+        <p>3: Pulsa "Añadir", situado en la parte superior derecha de tu pantalla.</p>
         <p id="icon-sandy-p">3: Busca el icono que acabas de crear junto al resto de tus aplicaciones y ábrelo: <img id="icon-sandy" src="img/removed-bg/free-sandy-removedbg.png" alt="Icono de la aplicación"></p>
         <p>4: ¡Disfruta de tu helado gratis!</p>
         <footer>
