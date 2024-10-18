@@ -2,7 +2,7 @@ const enlaceEstilo = document.getElementById('theme-stylesheet');
 const userAgent = navigator.userAgent;
 document.addEventListener("DOMContentLoaded", function () {
   // Comprobar si la web está en modo pantalla completa
-  if (!window.matchMedia('(display-mode: standalone)').matches) {
+  if (window.matchMedia('(display-mode: standalone)').matches) {
     console.log("La aplicación está en modo pantalla completa.");
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       // Espera a que el DOM esté completamente cargado
