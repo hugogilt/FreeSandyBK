@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin: 0 2em 3em;
+    margin: 0 2em 3.5em;
     background-color: #f0f0f0;
 }
 
@@ -61,12 +61,23 @@ body>p:last-of-type {
     width: 320px;
 }
 
+#boton-configuracion {
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+#menu-configuracion {
+    width: 200px;
+}
+
+
 
 footer {
     background-color: #002B89;
     color: white;
     font-weight: bold;
-    padding: 1em 2em;
+    padding: 1.5em 2em;
     border-radius: 12px 12px 0px 0px;
     width: 100vw;
     text-align: center;
@@ -161,9 +172,12 @@ footer {
     body {
         align-items: start;
     }
+    #menu-configuracion {
+        margin: 0 auto;
+    }
 }
 
-@media (max-height: 900px) {
+@media (max-height: 950px) {
     html {
         height: initial;
     }
@@ -190,6 +204,11 @@ footer {
 
     #menu-compartir {
         width: 200px;
+    }
+
+    #menu-configuracion {
+        width: 150px;
+        margin: 0 auto;
     }
 
     #icon-sandy {
