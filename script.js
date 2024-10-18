@@ -1,5 +1,5 @@
-
 const enlaceEstilo = document.getElementById('theme-stylesheet');
+const userAgent = navigator.userAgent;
 document.addEventListener("DOMContentLoaded", function () {
   // Comprobar si la web está en modo pantalla completa
   if (window.navigator.standalone) {
@@ -31,11 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('#return').onclick = (() => window.location.href = "https://www.miexperienciabkespana.com/");
   } else {
     // Código para cuando no está en pantalla completa
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      // Dispositivo iOS
+      console.log('iOS');
+  } else if (/Android/.test(userAgent)) {
+      // Dispositivo Android
+      console.log('Android');
+  } else {
+      // Otro dispositivo
+      console.log('PC');
+  }
     enlaceEstilo.setAttribute('href', './alertaPantallaCompleta.css');
     localStorage.setItem('estiloSeleccionado', './alertaPantallaCompleta.css');
     console.log("La aplicación NO está en modo pantalla completa.");
     document.body.innerHTML = `
-        <h2>Esta web solo es compatible con dispositivos IOS tras añadirla a la pantalla de inicio.</h2>
+        <h2>Para el correcto funcionamiento de esta web, es necesario añadirla a la pantalla de inicio.</h2>
         <h3>Pasos a seguir:</h3>
         <p>1: Haz click en el botón "compartir" de la barra de direcciones: <img id="share" src="img/removed-bg/share-transparent.png" alt="Botón compartir"></p>
         <p>2: Busca la opción: "Añadir a pantalla de inicio" y haz click.</p><img id="menu-compartir" src="img/menu_compartir.png" alt="Menú compartir">
