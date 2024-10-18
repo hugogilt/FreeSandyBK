@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("La aplicación NO está en modo pantalla completa.");
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       // Dispositivo iOS
-      if (/Chrome/i.test(userAgent)) {
+      if (/CriOS/i.test(userAgent)) {
         //Chrome
         document.body.innerHTML = `
         <h2>Para el correcto funcionamiento de esta web, es necesario añadirla a la pantalla de inicio.</h2>
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <span lang="es">  Si quieres apoyarme, <span class="link">haz click aquí.</span><span lang="en" id="copyright">&copy;Copyright 2024 Hugo Gil Tejero</span></span>
         </footer>
       `;
-      } else if(/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) {
+      } else if(/Safari/i.test(userAgent)) {
         //Safari
         alert('mec');
         document.body.innerHTML = `
